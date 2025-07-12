@@ -1,0 +1,137 @@
+body {
+    background-color: #0A1232;
+    margin: 0;
+    padding: 0;
+}
+nav {
+    color: rgb(253, 182, 48);
+    text-decoration-color: #3fc488;
+}
+a {
+    text-decoration: none;
+    color: white;
+}
+.firm {
+    color: rgb(253, 182, 48);
+    font-weight: 600rem;
+    text-align: center;
+}
+h2 {
+    color: rgb(253, 182, 48);
+}
+
+.likh {
+    color: white;
+    z-index: 10;
+}
+
+/* New styles for finisher-header parallax effect */
+.finisher-header {
+    position: fixed;
+    top: 85;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: 0;
+    pointer-events: none; /* Allow clicks to pass through */
+    overflow: hidden;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#main-content {
+    /* position: fixed; */
+    z-index: 1;
+    /* padding-top: 100vh; */ /* Removed to prevent pushing navbar down */
+    background-color: transparent !important;
+    color: white;
+}
+
+nav.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    background-color: #0A1232; /* Solid background to hide content behind */
+    box-shadow: 0 4px 6px -1px rgba(0,0,0,0.3); /* Shadow at bottom border */
+    border-bottom: none; /* Remove existing border */
+}
+
+.navbar-blur {
+    position: fixed;
+    top: 56px; /* Adjust based on navbar height */
+    left: 0;
+    width: 100%;
+    height: 30px;
+    backdrop-filter: blur(10px);
+    background-color: rgba(255, 255, 255, 0.1);
+    z-index: 1;
+    pointer-events: none;
+}
+
+aside {
+    position: relative;
+    z-index: 1;
+    background-color: transparent !important;
+    color: rgb(253, 182, 48);
+}
+
+.btn-group > div {
+    position: relative;
+}
+
+ul > a 
+{
+    display: inline-block;
+    width: 100%;
+}
+
+footer{
+    z-index: 5;
+}
+
+li > a {
+    display: inline-block;
+    width: 400px;
+    border: 2px solid transparent;
+    box-sizing: border-box;
+    text-transform: none;
+    position: relative;
+    transition: border-color 0.3s ease;
+    padding: 2px 4px;
+    overflow: hidden;
+}
+
+li > a:hover {
+    text-transform: uppercase;
+}
+
+li > a:hover::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 60px;
+    height: 100%;
+    border: 2px solid #3fc488;
+    border-left: 0px solid transparent;
+    border-right: 0px solid transparent;
+    box-sizing: border-box;
+    animation: shine 1s forwards;
+    pointer-events: none;
+}
+
+ul {
+    list-style-type:none;
+}
+
+@keyframes shine {
+    0% {
+        left: -100%;
+    }
+    100% {
+        left: 100%;
+    }
+}
